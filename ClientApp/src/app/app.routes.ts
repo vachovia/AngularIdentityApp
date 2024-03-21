@@ -17,6 +17,13 @@ export const routes: Routes = [
     loadChildren: () => import('./home/home.routes').then((m) => m.routes),
   },
   {
+    path: 'play',
+    loadChildren: () =>
+      import('./play/play.routes').then(
+        (m) => m.routes
+      ),
+  },
+  {
     path: 'not-found',
     loadChildren: () =>
       import('./shared/components/errors/not-found/notFound.routes').then(
